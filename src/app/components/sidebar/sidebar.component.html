@@ -7,14 +7,14 @@
       <span class="text">AdminHub</span>
     </a>
     <ul class="side-menu top">
-      <li class="active">
-        <a href="#">
+      <li [class.active]="isActive('Dashboard')" (click)="setActive('Dashboard')">
+        <a routerLink="/admin" routerLinkActive="active">
           <i class='bx bxs-dashboard' ></i>
           <span class="text">Dashboard</span>
         </a>
       </li>
-      <li>
-        <a href="#">
+      <li [class.active]="isActive('My Store')" (click)="setActive('My Store')">
+        <a routerLink="/admin">
           <i class='bx bxs-shopping-bag-alt' ></i>
           <span class="text">My Store</span>
         </a>

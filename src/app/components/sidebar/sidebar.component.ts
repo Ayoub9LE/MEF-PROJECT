@@ -12,4 +12,13 @@ addToggle()
 {
   this.status = !this.status;       
 }
+activeItem: string = '';
+
+  isActive(item: string): boolean {
+    return this.activeItem === item;
+  }
+
+  setActive(item: string): void {
+    this.activeItem = item;
+  }
 }
