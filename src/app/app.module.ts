@@ -8,11 +8,14 @@ import { UserloginComponent } from './userlogin/userlogin.component';
 import { RegisterComponent } from './register/register.component';
 import { AdminlayoutComponent } from './adminlayout/adminlayout.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { NavbarComponent } from './components/sidebar/navbar/navbar.component';
 const routes: Routes= [
   {path : "login", component : UserloginComponent},
   {path : "register", component : RegisterComponent},
   {path : "admin", component : AdminlayoutComponent},
   {path : "sidebar", component : SidebarComponent},
+  {path : "navbar", component : NavbarComponent}
+
 
 
 
@@ -24,7 +27,8 @@ const routes: Routes= [
     UserloginComponent,
     RegisterComponent,
     AdminlayoutComponent,
-    SidebarComponent
+    SidebarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

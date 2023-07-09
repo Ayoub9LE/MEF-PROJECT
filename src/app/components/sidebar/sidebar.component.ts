@@ -1,24 +1,31 @@
-import { Component } from '@angular/core';
-import { ElementRef, Renderer2, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
   styleUrls: ['./sidebar.component.css']
 })
-export class SidebarComponent {
-  //Sidebar toggle show hide function
-status = false;
+export class SidebarComponent implements OnInit {
+  status = false;
 addToggle()
 {
   this.status = !this.status;       
 }
-activeItem: string = '';
+  activeItem: string = '';
 
-  isActive(item: string): boolean {
-    return this.activeItem === item;
+  constructor(private route: ActivatedRoute, private router: Router) {}
+
+  ngOnInit() {
+    this.route.url.subscribe(urlSegments => {
+      const path = urlSegments[0]?.path;
+      if (path) {
+        this.activeItem = (path === 'admin') ? 'Dashboard' : path;
+      }
+    });
   }
 
-  setActive(item: string): void {
+  setActiveItem(item: string) {
     this.activeItem = item;
   }
 }
