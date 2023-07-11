@@ -31,6 +31,10 @@ li {
   --light-orange: #FFE0D3;
 }
 
+
+
+
+
 html {
   overflow-x: hidden;
 }
@@ -157,6 +161,50 @@ body {
   display: flex;
   justify-content: center;
 }
+.sub-menu {
+  display: none;
+position: relative; 
+left:25%;
+  width: 200px;
+}
+
+.sub-menu li {
+  height: 48px;
+  background: transparent;
+  margin-left: 6px;
+  border-radius: 48px 0 0 48px;
+  padding: 4px;
+}
+
+#sidebar .sub-menu li a {
+  width: 100%;
+  height: 100%;
+  background: var(--light)!important;
+  display: flex;
+  align-items: center;
+  border-radius: 48px;
+  color: var(--dark);
+  white-space: nowrap;
+}
+
+#sidebar .sub-menu li a:hover {
+  color: var(--blue)!important;
+}
+
+.sub-menu li a .bx {
+  min-width: calc(60px  - ((4px + 6px) * 2));
+  display: flex;
+  justify-content: center;
+}
+
+.sub-menu.show {
+  display: block;
+}
+
+.sub-menu.hide {
+  display: none;
+}
+
 /* SIDEBAR */
 
 

@@ -4,7 +4,8 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
-  styleUrls: ['./sidebar.component.css']
+  styleUrls: ['./sidebar.component.css'],
+  
 })
 export class SidebarComponent implements OnInit {
   status = false;
@@ -28,4 +29,13 @@ addToggle()
   setActiveItem(item: string) {
     this.activeItem = item;
   }
+
+  toggleActiveItem(item: string): void {
+    if (this.activeItem === item) {
+      this.activeItem = '';
+    } else {
+      this.activeItem = item;
+    }
+  }
+  
 }
