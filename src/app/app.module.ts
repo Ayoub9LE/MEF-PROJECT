@@ -11,6 +11,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { NavbarComponent } from './components/sidebar/navbar/navbar.component';
 import { TestComponent } from './test/test.component';
 import { AddConcoursComponent } from './Concours/add-concours/add-concours.component';
+import { ListconcoursComponent } from './Concours/listconcours/listconcours.component';
 const routes: Routes= [
   {path : "login", component : UserloginComponent},
   {path : "register", component : RegisterComponent},
@@ -18,7 +19,9 @@ const routes: Routes= [
   {path : "sidebar", component : SidebarComponent},
   {path : "navbar", component : NavbarComponent},
   {path : "test", component : TestComponent},
-  {path : "addconcours", component : AddConcoursComponent}
+  {path : "addconcours", component : AddConcoursComponent},
+  {path : "listconcours", component : ListconcoursComponent}
+
 
 
 
@@ -35,7 +38,8 @@ const routes: Routes= [
     AdminlayoutComponent,
     SidebarComponent,
     NavbarComponent,
-    AddConcoursComponent  ],
+    AddConcoursComponent,
+    ListconcoursComponent  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes)
