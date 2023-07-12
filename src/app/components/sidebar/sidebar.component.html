@@ -14,19 +14,19 @@
         </a>
       </li>
       <li [class.active]="activeItem === 'Concours'" (click)="toggleActiveItem('Concours')">
-        <a routerLink="/admin">
+<a href="javascript:void(0)">
           <i class='bx bxs-book-content' ></i>
           <span class="text">Concours</span>
           <i class='bx bxs-chevron-up' *ngIf="activeItem !== 'Concours'"></i>
           <i class='bx bxs-chevron-right' *ngIf="activeItem === 'Concours'"></i>
         </a>
         <ul class="sub-menu" [style.display]="activeItem === 'Concours' ? 'block' : 'none'">
-          <li><a href="#" >Ajouter Concours</a></li>
+          <li ><a href="/addconcours" >Ajouter Concours</a></li>
           <li><a href="#" >Modifier Concours</a></li>
           <li><a href="#" >Consulter Concours</a></li>
         </ul>
       </li>
-      
+       
       
       
       

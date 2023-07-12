@@ -1,153 +1,176 @@
 <!DOCTYPE html>
-<!-- Coding by CodingNepal | www.codingnepalweb.com -->
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title> Drop Down Sidebar Menu | CodingLab </title>
-    <!-- Boxiocns CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   </head>
+<html lang="en">
+
+<head>
+  <title>Responsive Table</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+  <style>
+    @media only screen and (max-width: 800px) {
+      #no-more-tables tbody,
+      #no-more-tables tr,
+      #no-more-tables td {
+        display: block;
+      }
+      .bg-dark.text-light th {
+      color: white!important;/* Set text color to white */
+    }
+
+      #no-more-tables thead tr {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+     
+
+      #no-more-tables td {
+        position: relative;
+        padding-left: 50%;
+        border: none;
+        border-bottom: 1px solid #eee;
+        vertical-align: middle; /* Align text in the middle */
+      }
+
+      #no-more-tables td:before {
+        content: attr(data-title);
+        position: absolute;
+        left: 6px;
+        font-weight: bold;
+      }
+
+      #no-more-tables tr {
+        border-bottom: 1px solid #ccc;
+      }
+    }
+
+    .blue-icon {
+      color: blue;
+      margin-right: 10px;
+    }
+    .blue-icon:hover {
+         color: gray;}
+    .red-icon {
+      color: red;
+      margin-right: 10px;
+
+    }
+
+    .green-icon {
+      color: green;
+    }
+  </style>
+</head>
+
 <body>
-  <div class="sidebar close">
-    <div class="logo-details">
-      <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">CodingLab</span>
-    </div>
-    <ul class="nav-links">
-      <li>
-        <a href="#">
-          <i class='bx bx-grid-alt' ></i>
-          <span class="link_name">Dashboard</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Category</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-collection' ></i>
-            <span class="link_name">Category</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Category</a></li>
-          <li><a href="#">HTML & CSS</a></li>
-          <li><a href="#">JavaScript</a></li>
-          <li><a href="#">PHP & MySQL</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-book-alt' ></i>
-            <span class="link_name">Posts</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Posts</a></li>
-          <li><a href="#">Web Design</a></li>
-          <li><a href="#">Login Form</a></li>
-          <li><a href="#">Card Design</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-pie-chart-alt-2' ></i>
-          <span class="link_name">Analytics</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Analytics</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-line-chart' ></i>
-          <span class="link_name">Chart</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Chart</a></li>
-        </ul>
-      </li>
-      <li>
-        <div class="iocn-link">
-          <a href="#">
-            <i class='bx bx-plug' ></i>
-            <span class="link_name">Plugins</span>
-          </a>
-          <i class='bx bxs-chevron-down arrow' ></i>
-        </div>
-        <ul class="sub-menu">
-          <li><a class="link_name" href="#">Plugins</a></li>
-          <li><a href="#">UI Face</a></li>
-          <li><a href="#">Pigments</a></li>
-          <li><a href="#">Box Icons</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-compass' ></i>
-          <span class="link_name">Explore</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Explore</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-history'></i>
-          <span class="link_name">History</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">History</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#">
-          <i class='bx bx-cog' ></i>
-          <span class="link_name">Setting</span>
-        </a>
-        <ul class="sub-menu blank">
-          <li><a class="link_name" href="#">Setting</a></li>
-        </ul>
-      </li>
-      <li>
-    <div class="profile-details">
-      <div class="profile-content">
-        <img src="image/profile.jpg" alt="profileImg">
-      </div>
-      <div class="name-job">
-        <div class="profile_name">Prem Shahi</div>
-        <div class="job">Web Desginer</div>
-      </div>
-      <i class='bx bx-log-out' ></i>
-    </div>
-  </li>
-</ul>
-  </div>
-  <section class="home-section">
-    <div class="home-content">
-      <i class='bx bx-menu' ></i>
-      <span class="text">Drop Down Sidebar</span>
-    </div>
-  </section>
-  <script>
-  let arrow = document.querySelectorAll(".arrow");
-  for (var i = 0; i < arrow.length; i++) {
-    arrow[i].addEventListener("click", (e)=>{
-   let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
-   arrowParent.classList.toggle("showMenu");
-    });
-  }
-  let sidebar = document.querySelector(".sidebar");
-  let sidebarBtn = document.querySelector(".bx-menu");
-  console.log(sidebarBtn);
-  sidebarBtn.addEventListener("click", ()=>{
-    sidebar.classList.toggle("close");
-  });
-  </script>
-</body>
-</html>
+  <section class="bg-light p-5">
+    <h3 class="pb-2">Responsive Table</h3>
+    <div class="table-responsive" id="no-more-tables">
+      <table class="table table-hover">
+        <thead class="bg text-light" style="background-color: #3C91E6;">
+          <tr>
+            <th scope="col">Nom</th>
+            <th>Description</th>
+            <th>Nombre de Places</th>
+            <th>Lieu</th>
+            <th>Date de Début</th>
+            <th>Date de Fin</th>
+            <th>État</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-title="Nom">Concours 1</td>
+            <td data-title="Description">Description 1</td>
+            <td data-title="Nombre de Places">10</td>
+            <td data-title="Lieu">Lieu 1</td>
+            <td data-title="Date de Début">2023-07-15</td>
+            <td data-title="Date de Fin">2023-07-20</td>
+            <td data-title="État">Actif</td>
+            <td data-title="Actions">
+              <i class="bx bxs-pencil blue-icon"></i>
+              <i class="bx bxs-trash red-icon"></i>
+              <i class="bx bxs-search green-icon"></i>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Nom">Concours 2</td>
+            <td data-title="Description">Description 2</td>
+            <td data-title="Nombre de Places">15</td>
+            <td data-title="Lieu">Lieu 2</td>
+            <td data-title="Date de Début">2023-08-01</td>
+            <td data-title="Date de Fin">2023-08-05</td>
+            <td data-title="État">Inactif</td>
+            <td data-title="Actions">
+              <i class="bx bxs-pencil blue-icon"></i>
+              <i class="bx bxs-trash red-icon"></i>
+              <i class="bx bxs-search green-icon"></i>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Nom">Concours 3</td>
+            <td data-title="Description">Description 3</td>
+            <td data-title="Nombre de Places">8</td>
+            <td data-title="Lieu">Lieu 3</td>
+            <td data-title="Date de Début">2023-09-10</td>
+            <td data-title="Date de Fin">2023-09-15</td>
+            <td data-title="État">Actif</td>
+            <td data-title="Actions">
+              <i class="bx bxs-pencil blue-icon"></i>
+              <i class="bx bxs-trash red-icon"></i>
+              <i class="bx bxs-search green-icon"></i>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Nom">Concours 4</td>
+            <td data-title="Description">Description 4</td>
+            <td data-title="Nombre de Places">5</td>
+            <td data-title="Lieu">Lieu 4</td>
+            <td data-title="Date de Début">2023-10-01</td>
+            <td data-title="Date de Fin">2023-10-05</td>
+            <td data-title="État">Inactif</td>
+            <td data-title="Actions">
+              <i class="bx bxs-pencil blue-icon"></i>
+              <i class="bx bxs-trash red-icon"></i>
+              <i class="bx bxs-search green-icon"></i>
+            </td>
+          </tr>
+          <tr>
+            <td data-title="Nom">Concours 5</td>
+            <td data-title="Description">Description 5</td>
+            <td data-title="Nombre de Places">12</td>
+            <tr>
+              <td data-title="Nom">Concours 5</td>
+              <td data-title="Description">Description 5</td>
+              <td data-title="Nombre de Places">12</td>
+              <td data-title="Lieu">Lieu 5</td>
+              <td data-title="Date de Début">2023-11-01</td>
+              <td data-title="Date de Fin">2023-11-07</td>
+              <td data-title="État">Actif</td>
+              <td data-title="Actions">
+                <i class="bx bxs-pencil blue-icon"></i>
+                <i class="bx bxs-trash red-icon"></i>
+                <i class="bx bxs-search green-icon"></i>
+              </td>
+            </tr>
+            <tr>
+              <td data-title="Nom">Concours 6</td>
+              <td data-title="Description">Description 6</td>
+              <td data-title="Nombre de Places">20</td>
+              <td data-title="Lieu">Lieu 6</td>
+              <td data-title="Date de Début">2023-12-01</td>
+              <td data-title="Date de Fin">2023-12-10</td>
+              <td data-title="État">Actif</td>
+              <td data-title="Actions">
+                <i class="bx bxs-pencil blue-icon"></i>
+                <i class="bx bxs-trash red-icon"></i>
+                <i class="bx bxs-search green-icon"></i>
+              </td>
+            </tr>
+            </tbody>
+            </table>
+            </div>
+            </section>
+            </body>
+            </html>

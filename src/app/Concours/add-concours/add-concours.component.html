@@ -1,0 +1,73 @@
+
+<app-sidebar></app-sidebar>
+    <app-navbar></app-navbar>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajouter Concours</title>
+</head>
+<body>
+  <div class="container">
+    <header>Ajouter Concours</header>
+    <form>
+      <div class="form first">
+        <div class="details personal">
+          <span class="title">Informations du Concours</span>
+          <div class="fields">
+            <div class="input-field">
+              <label>Nom du concours</label>
+              <input type="text" name="Nom" required>
+            </div>
+            <div class="input-field">
+              <label>Description</label>
+              <input type="text" name="Description" required>
+            </div>
+            <div class="input-field">
+              <label>Type</label>
+              <input type="text" name="Type" required>
+            </div>
+            <div class="input-field">
+              <label>Nombre de participants</label>
+              <input type="number" name="NombreDeParticipants" required>
+            </div>
+            <div class="input-field">
+              <label>Nombre de places</label>
+              <input type="number" name="NombreDePlaces" required>
+            </div>
+            <div class="input-field">
+              <label>Frais d'inscription</label>
+              <input type="number" name="FraisDInscription" step="0.01" required>
+            </div>
+            <div class="input-field">
+              <label>Règles</label>
+              <input type="text" name="Règles" required>
+            </div>
+            <div class="input-field">
+              <label>Lieu</label>
+              <input type="text" name="Lieu" required>
+            </div>
+            <div class="input-field">
+              <label>Date de début</label>
+              <input type="date" name="DateDeDebut" required>
+            </div>
+            <div class="input-field">
+              <label>Date de fin</label>
+              <input type="date" name="DateDeFin" required>
+            </div>
+            <div class="input-field">
+              <label>État</label>
+              <input type="text" name="Etat" required>
+            </div>
+          </div>
+        </div>
+        <button class="ajouter-btn" type="submit">
+          <i class="bx bx-plus"></i>
+          Ajouter
+        </button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
