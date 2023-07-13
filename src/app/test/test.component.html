@@ -1,142 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2>Identité</h2>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="civilite">Civilité</label>
-                            <select id="civilite" class="form-control">
-                                <option>Monsieur</option>
-                                <option>Madame</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="cin">CIN</label>
-                            <input type="text" class="form-control" id="cin" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="nom">Nom</label>
-                            <input type="text" class="form-control" id="nom" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="prenom">Prénom</label>
-                            <input type="text" class="form-control" id="prenom" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="date_naissance">Date de Naissance</label>
-                            <input type="date" class="form-control" id="date_naissance" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="lieu_naissance">Lieu de Naissance</label>
-                            <input type="text" class="form-control" id="lieu_naissance" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="profession">Profession Actuelle</label>
-                        <input type="text" class="form-control" id="profession" required>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Adresse et Coordonnées</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="adresse">Adresse de Résidence Actuelle</label>
-                        <input type="text" class="form-control" id="adresse" required>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="ville">Ville de Résidence</label>
-                            <input type="text" class="form-control" id="ville" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="code_postal">Code Postal</label>
-                            <input type="text" class="form-control" id="code_postal" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="telephone">Téléphone (+212)</label>
-                            <input type="text" class="form-control" id="telephone" required>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Diplôme</h2>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="pays">Pays</label>
-                            <input type="text" class="form-control" id="pays" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="annee_obtention">Année d'Obtention</label>
-                            <input type="number" class="form-control" id="annee_obtention" required>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="diplome_obtenu">Diplôme Obtennu</label>
-                            <input type="text" class="form-control" id="diplome_obtenu" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="specialite">Spécialité</label>
-                            <input type="text" class="form-control" id="specialite" required>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="etablissement">Établissement</label>
-                        <input type="text" class="form-control" id="etablissement" required>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Concours Choisi</h2>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="concours">Concours</label>
-                            <select id="concours" class="form-control">
-                                <!-- Add your options here -->
-                            </select>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="specialite_choisie">Spécialité Choisie</label>
-                            <select id="specialite_choisie" class="form-control">
-                                <!-- Add your options here -->
-                            </select>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Soumettre</button>
-    </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
+<table class="table table-hover table-center-text">
+  <thead class="bg-white-text" style="background-color: #3C91E6;">
+    <tr>
+      <th scope="col">Nom</th>
+      <th>Prenom</th>
+      <th>Profession Actuelle</th>
+      <th>Email</th>
+      <th>Diplome Obtenu</th>
+      <th>Specialité</th>
+      <th>Statut</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let candidate of candidates">
+      <td>{{ candidate.nom }}</td>
+      <td>{{ candidate.prenom }}</td>
+      <td>{{ candidate.profession }}</td>
+      <td>{{ candidate.email }}</td>
+      <td>{{ candidate.diplome }}</td>
+      <td>{{ candidate.specialite }}</td>
+      <td>{{ candidate.statut }}</td>
+    </tr>
+  </tbody>
+</table>
