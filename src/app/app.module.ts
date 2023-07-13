@@ -13,6 +13,7 @@ import { TestComponent } from './test/test.component';
 import { AddConcoursComponent } from './Concours/add-concours/add-concours.component';
 import { ListconcoursComponent } from './Concours/listconcours/listconcours.component';
 import { ModifyconcoursComponent } from './Concours/modifyconcours/modifyconcours.component';
+import { InsererInscComponent } from './Inscriptions/inserer-insc/inserer-insc.component';
 const routes: Routes= [
   {path : "login", component : UserloginComponent},
   {path : "register", component : RegisterComponent},
@@ -21,13 +22,9 @@ const routes: Routes= [
   {path : "navbar", component : NavbarComponent},
   {path : "test", component : TestComponent},
   {path : "addconcours", component : AddConcoursComponent},
-  {path : "listconcours", component : ListconcoursComponent}
-
-
-
-
-
-
+  {path : "listconcours", component : ListconcoursComponent},
+  {path : "modifyconcours", component : ModifyconcoursComponent},
+  {path : "insererInsc", component : InsererInscComponent}
 
 ]; 
 
@@ -41,7 +38,8 @@ const routes: Routes= [
     NavbarComponent,
     AddConcoursComponent,
     ListconcoursComponent,
-    ModifyconcoursComponent  ],
+    ModifyconcoursComponent,
+    InsererInscComponent  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes)

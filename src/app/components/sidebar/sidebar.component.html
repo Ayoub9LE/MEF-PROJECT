@@ -22,7 +22,7 @@
         </a>
         <ul class="sub-menu" [style.display]="activeItem === 'Concours' ? 'block' : 'none'">
           <li ><a href="/addconcours" >Ajouter Concours</a></li>
-          <li><a href="#" >Modifier Concours</a></li>
+          <li><a href="/modifyconcours" >Modifier Concours</a></li>
           <li><a href="/listconcours" >Consulter Concours</a></li>
         </ul>
       </li>
@@ -31,7 +31,7 @@
       
       
       <li [class.active]="activeItem === 'Inscriptions'" (click)="setActiveItem('Inscriptions')">
-        <a href="/login">
+        <a href="/insererInsc">
           <i class='bx bxs-edit' ></i>
                     <span class="text">Inscriptions</span>
         </a>

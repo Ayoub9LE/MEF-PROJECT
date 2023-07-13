@@ -1,1 +1,79 @@
-<p>modifyconcours works!</p>
+<app-sidebar></app-sidebar>
+<app-navbar></app-navbar>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modifier Concours</title>
+
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-5">
+    <h1 class="mb-5">Modifier Concours</h1>
+    <form id="updateForm">
+      <div class="form-group">
+        <label for="Nom">Nom du concours</label>
+        <input type="text" class="form-control" id="Nom" value="Exemple de concours" required>
+      </div>
+      <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="Description" value="C'est un exemple de concours" required>
+      </div>
+      <div class="form-group">
+        <label for="Type">Type</label>
+        <input type="text" class="form-control" id="Type" value="Type 1" required>
+      </div>
+      <div class="form-group">
+        <label for="NombreDeParticipants">Nombre de participants</label>
+        <input type="number" class="form-control" id="NombreDeParticipants" value="100" required>
+      </div>
+      <div class="form-group">
+        <label for="NombreDePlaces">Nombre de places</label>
+        <input type="number" class="form-control" id="NombreDePlaces" value="50" required>
+      </div>
+      <div class="form-group">
+        <label for="FraisDInscription">Frais d'inscription</label>
+        <input type="number" class="form-control" id="FraisDInscription" value="10" step="0.01" required>
+      </div>
+      <div class="form-group">
+        <label for="Règles">Règles</label>
+        <input type="text" class="form-control" id="Règles" value="Respecter tous les participants" required>
+      </div>
+      <div class="form-group">
+        <label for="Lieu">Lieu</label>
+        <input type="text" class="form-control" id="Lieu" value="Paris" required>
+      </div>
+      <div class="form-group">
+        <label for="DateDeDebut">Date de début</label>
+        <input type="date" class="form-control" id="DateDeDebut" value="2023-01-01" required>
+      </div>
+      <div class="form-group">
+        <label for="DateDeFin">Date de fin</label>
+        <input type="date" class="form-control" id="DateDeFin" value="2023-12-31" required>
+      </div>
+      <div class="form-group">
+        <label for="Etat">État</label>
+        <input type="text" class="form-control" id="Etat" value="Actif" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Modifier</button>
+    </form>
+  </div>
+
+  <!-- Add Bootstrap JavaScript at the end of the body tag -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Add script to handle form submission -->
+  <script>
+    document.getElementById('updateForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Your AJAX request to update the data on the server goes here.
+      alert('Data has been updated!');
+    });
+  </script>
+</body>
+</html>
