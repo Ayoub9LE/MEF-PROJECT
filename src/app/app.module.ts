@@ -12,6 +12,7 @@ import { NavbarComponent } from './components/sidebar/navbar/navbar.component';
 import { TestComponent } from './test/test.component';
 import { AddConcoursComponent } from './Concours/add-concours/add-concours.component';
 import { ListconcoursComponent } from './Concours/listconcours/listconcours.component';
+import { ModifyconcoursComponent } from './Concours/modifyconcours/modifyconcours.component';
 const routes: Routes= [
   {path : "login", component : UserloginComponent},
   {path : "register", component : RegisterComponent},
@@ -39,7 +40,8 @@ const routes: Routes= [
     SidebarComponent,
     NavbarComponent,
     AddConcoursComponent,
-    ListconcoursComponent  ],
+    ListconcoursComponent,
+    ModifyconcoursComponent  ],
   imports: [
     BrowserModule,
     RouterModule.forRoot(routes)

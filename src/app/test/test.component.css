@@ -1,0 +1,51 @@
+body {
+  font-family: var(--poppins);
+  background-color: var(--light);
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+  color: var(--dark);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: .5rem;
+  color: var(--dark);
+}
+
+.form-group input {
+  width: 100%;
+  padding: .5rem;
+  border: none;
+  border-radius: .25rem;
+  background-color: var(--light-blue);
+  color: var(--dark);
+}
+
+.btn {
+  display: block;
+  width: 100%;
+  padding: .75rem;
+  border: none;
+  border-radius: .25rem;
+  background-color: var(--blue);
+  color: var(--light);
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn:hover {
+  background-color: var(--dark-grey);
+}

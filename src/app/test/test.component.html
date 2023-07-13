@@ -1,226 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Responsive Table</title>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
-  <style>
-     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modifier Concours</title>
 
-    a {
-      text-decoration: none;
-    }
-
-    li {
-      list-style: none;
-    }
-
-    :root {
-      --poppins: 'Poppins', sans-serif;
-      --lato: 'Lato', sans-serif;
-      --light: #F9F9F9;
-      --blue: #3C91E6;
-      --light-blue: #CFE8FF;
-      --grey: #eee;
-      --dark-grey: #AAAAAA;
-      --dark: #342E37;
-      --red: #DB504A;
-      --yellow: #FFCE26;
-      --light-yellow: #FFF2C6;
-      --orange: #FD7238;
-      --light-orange: #FFE0D3;
-    }
-
-    html {
-      overflow-x: hidden;
-    }
-
-    body.dark {
-      --light: #0C0C1E;
-      --grey: #060714;
-      --dark: #FBFBFB;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--grey);
-    }
-
-    .container {
-      position: relative;
-      max-width: 900px;
-      width: 100%;
-      border-radius: 6px;
-      padding: 30px;
-      margin: 0 15px;
-      background-color: var(--light);
-      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .table-center-text td,
-    .table-center-text th {
-      text-align: center;
-    }
-
-    .bg-white-text th {
-      color: white!important;
-      border-bottom: none!important;
-    }
-    @media only screen and (max-width: 800px) {
-      #no-more-tables tbody,
-      #no-more-tables tr,
-      #no-more-tables td {
-        display: block;
-      }
-  
-      #no-more-tables thead tr {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-      }
-  
-      #no-more-tables td {
-        position: relative;
-        padding-left: 50%;
-        border: none;
-        border-bottom: 1px solid #eee;
-        vertical-align: middle; /* Align text in the middle */
-      }
-  
-      #no-more-tables td:before {
-        content: attr(data-title);
-        position: absolute;
-        left: 6px;
-        font-weight: bold;
-      }
-  
-      #no-more-tables tr {
-        border-bottom: 1px solid #ccc;
-      }
-    }
-  
-    .blue-icon {
-      color: blue;
-      margin-right: 10px;
-    }
-    .blue-icon:hover {
-      color: gray;
-    }
-    .green-icon:hover {
-      color: gray;
-    }
-    .red-icon:hover {
-      color: gray;
-    }
-    .red-icon {
-      color: red;
-      margin-right: 10px;
-    }
-  
-    .green-icon {
-      color: green;
-    }
-  
-    /* Add this style to center the text in your table */
-    .table-center-text td,
-    .table-center-text th {
-      text-align: center;
-    }
-    
-    .bg-white-text th {
-      color: white!important; /* Set text color to white */
-      border-bottom: none!important; /* Remove bottom border */
-    }
-  </style>
-  
+  <!-- Add Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
 <body>
-  <section class="bg-light p-5">
-    <h3 class="pb-2">Liste des Concours</h3>
-    <div class="table-responsive">
-      <table class="table table-hover table-center-text">
-        <thead class="bg-white-text" style="background-color: #3C91E6;">
-          <tr>
-            <th scope="col">Nom</th>
-            <th>Description</th>
-            <th>Nombre de Places</th>
-            <th>Lieu</th>
-            <th>Date de Début</th>
-            <th>Date de Fin</th>
-            <th>État</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- I will just show four rows as per your request -->
-          <tr>
-            <td>Concours 1</td>
-            <td>Description 1</td>
-            <td>10</td>
-            <td>Lieu 1</td>
-            <td>2023-07-15</td>
-            <td>2023-07-20</td>
-            <td>Actif</td>
-            <td>
-              <i class="bx bxs-pencil blue-icon"></i>
-              <i class="bx bxs-trash red-icon"></i>
-              <i class="bx bxs-search green-icon"></i>
-            </td>
-          </tr>
-          <tr>
-            <td>Concours 2</td>
-            <td>Description 2</td>
-            <td>15</td>
-            <td>Lieu 2</td>
-            <td>2023-08-01</td>
-            <td>2023-08-05</td>
-            <td>Inactif</td>
-            <td>
-              <i class="bx bxs-pencil blue-icon"></i>
-              <i class="bx bxs-trash red-icon"></i>
-              <i class="bx bxs-search green-icon"></i>
-            </td>
-          </tr>
-          <tr>
-            <td>Concours 3</td>
-            <td>Description 3</td>
-            <td>8</td>
-            <td>Lieu 3</td>
-            <td>2023-09-10</td>
-            <td>2023-09-15</td>
-            <td>Actif</td>
-            <td>
-              <i class="bx bxs-pencil blue-icon"></i>
-              <i class="bx bxs-trash red-icon"></i>
-              <i class="bx bxs-search green-icon"></i>
-            </td>
-          </tr>
-          <tr>
-            <td>Concours 4</td>
-            <td>Description 4</td>
-            <td>5</td>
-            <td>Lieu 4</td>
-            <td>2023-10-01</td>
-            <td>2023-10-05</td>
-            <td>Inactif</td>
-            <td>
-              <i class="bx bxs-pencil blue-icon"></i>
-              <i class="bx bxs-trash red-icon"></i>
-              <i class="bx bxs-search green-icon"></i>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
+
+  <div class="container mt-5">
+    <h1 class="mb-5">Modifier Concours</h1>
+    <form id="updateForm">
+      <div class="form-group">
+        <label for="Nom">Nom du concours</label>
+        <input type="text" class="form-control" id="Nom" value="Exemple de concours" required>
+      </div>
+      <div class="form-group">
+        <label for="Description">Description</label>
+        <input type="text" class="form-control" id="Description" value="C'est un exemple de concours" required>
+      </div>
+      <div class="form-group">
+        <label for="Type">Type</label>
+        <input type="text" class="form-control" id="Type" value="Type 1" required>
+      </div>
+      <div class="form-group">
+        <label for="NombreDeParticipants">Nombre de participants</label>
+        <input type="number" class="form-control" id="NombreDeParticipants" value="100" required>
+      </div>
+      <div class="form-group">
+        <label for="NombreDePlaces">Nombre de places</label>
+        <input type="number" class="form-control" id="NombreDePlaces" value="50" required>
+      </div>
+      <div class="form-group">
+        <label for="FraisDInscription">Frais d'inscription</label>
+        <input type="number" class="form-control" id="FraisDInscription" value="10" step="0.01" required>
+      </div>
+      <div class="form-group">
+        <label for="Règles">Règles</label>
+        <input type="text" class="form-control" id="Règles" value="Respecter tous les participants" required>
+      </div>
+      <div class="form-group">
+        <label for="Lieu">Lieu</label>
+        <input type="text" class="form-control" id="Lieu" value="Paris" required>
+      </div>
+      <div class="form-group">
+        <label for="DateDeDebut">Date de début</label>
+        <input type="date" class="form-control" id="DateDeDebut" value="2023-01-01" required>
+      </div>
+      <div class="form-group">
+        <label for="DateDeFin">Date de fin</label>
+        <input type="date" class="form-control" id="DateDeFin" value="2023-12-31" required>
+      </div>
+      <div class="form-group">
+        <label for="Etat">État</label>
+        <input type="text" class="form-control" id="Etat" value="Actif" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Modifier</button>
+    </form>
+  </div>
+
+  <!-- Add Bootstrap JavaScript at the end of the body tag -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+  <!-- Add script to handle form submission -->
+  <script>
+    document.getElementById('updateForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      // Your AJAX request to update the data on the server goes here.
+      alert('Data has been updated!');
+    });
+  </script>
 </body>
 </html>
