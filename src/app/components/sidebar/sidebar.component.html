@@ -30,12 +30,20 @@
       
       
       
-      <li [class.active]="activeItem === 'Inscriptions'" (click)="setActiveItem('Inscriptions')">
-        <a href="/insererInsc">
-          <i class='bx bxs-edit' ></i>
-                    <span class="text">Inscriptions</span>
+      <li [class.active]="activeItem === 'Inscriptions'" (click)="toggleActiveItem('Inscriptions')">
+        <a href="javascript:void(0)">
+          <i class='bx bxs-edit'></i>
+          <span class="text">Inscriptions</span>
+          <i class='bx bxs-chevron-up' *ngIf="activeItem !== 'Inscriptions'"></i>
+          <i class='bx bxs-chevron-right' *ngIf="activeItem === 'Inscriptions'"></i>
         </a>
+        <ul class="sub-menu" [style.display]="activeItem === 'Inscriptions' ? 'block' : 'none'">
+          <li><a href="/insererInsc">Ajouter Inscription</a></li>
+          <li><a href="/listinsc">Consulter Inscription</a></li>
+          <li><a href="/accepterrefuser">Valider/Refuser</a></li>
+        </ul>
       </li>
+      
       <li [class.active]="activeItem === 'Message'" (click)="setActiveItem('Message')">
         <a href="#">
           <i class='bx bxs-message-dots' ></i>

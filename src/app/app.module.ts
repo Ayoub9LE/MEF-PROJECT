@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { Routes, RouterModule } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 
 import { AppComponent } from './app.component';
@@ -14,6 +15,8 @@ import { AddConcoursComponent } from './Concours/add-concours/add-concours.compo
 import { ListconcoursComponent } from './Concours/listconcours/listconcours.component';
 import { ModifyconcoursComponent } from './Concours/modifyconcours/modifyconcours.component';
 import { InsererInscComponent } from './Inscriptions/inserer-insc/inserer-insc.component';
+import { InscriptionslistComponent } from './Inscriptions/inscriptionslist/inscriptionslist.component';
+import { AcceptrefuseinscComponent } from './Inscriptions/acceptrefuseinsc/acceptrefuseinsc.component';
 const routes: Routes= [
   {path : "login", component : UserloginComponent},
   {path : "register", component : RegisterComponent},
@@ -22,9 +25,10 @@ const routes: Routes= [
   {path : "navbar", component : NavbarComponent},
   {path : "test", component : TestComponent},
   {path : "addconcours", component : AddConcoursComponent},
-  {path : "listconcours", component : ListconcoursComponent},
-  {path : "modifyconcours", component : ModifyconcoursComponent},
-  {path : "insererInsc", component : InsererInscComponent}
+   {path : "modifyconcours", component : ModifyconcoursComponent},
+  {path : "insererInsc", component : InsererInscComponent},
+  {path : "listinsc", component : InscriptionslistComponent},
+  {path : "accepterrefuser", component : AcceptrefuseinscComponent}
 
 ]; 
 
@@ -39,9 +43,12 @@ const routes: Routes= [
     AddConcoursComponent,
     ListconcoursComponent,
     ModifyconcoursComponent,
-    InsererInscComponent  ],
+    InsererInscComponent ,
+    InscriptionslistComponent,
+    AcceptrefuseinscComponent ],
   imports: [
     BrowserModule,
+    CommonModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
