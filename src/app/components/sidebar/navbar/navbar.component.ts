@@ -7,9 +7,12 @@ import { Component,ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None  // Disable CSS encapsulation for the component
 })
 export class NavbarComponent {
-  status = false;
-addToggle()
-{
-  this.status = !this.status;       
-}
+  addToggle(): void {
+    console.log('Toggle function is triggered.');
+  }
+  dropdownOpen = false;
+
+  toggleDropdown() {
+    this.dropdownOpen = !this.dropdownOpen;
+  }
 }
