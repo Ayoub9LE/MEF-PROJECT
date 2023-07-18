@@ -1,148 +1,44 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/boxicons/boxicons/css/boxicons.min.css">
-</head>
-<body>
-    
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2>Identité</h2>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="civilite">Civilité</label>
-                            <input id="civilite" class="form-control" value="Monsieur" readonly>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="cin">CIN</label>
-                            <input type="text" class="form-control" id="cin" value="ABC123" readonly>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="nom">Nom</label>
-                            <input type="text" class="form-control" id="nom" value="Doe" readonly>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="prenom">Prénom</label>
-                            <input type="text" class="form-control" id="prenom" value="John" readonly>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="date_naissance">Date de Naissance</label>
-                            <input type="date" class="form-control" id="date_naissance" value="2000-01-01" readonly>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="lieu_naissance">Lieu de Naissance</label>
-                            <input type="text" class="form-control" id="lieu_naissance" value="Paris" readonly>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="profession">Profession Actuelle</label>
-                        <input type="text" class="form-control" id="profession" value="Engineer" readonly>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Adresse et Coordonnées</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="adresse">Adresse de Résidence Actuelle</label>
-                        <input type="text" class="form-control" id="adresse" value="123 Main St" readonly>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="ville">Ville de Résidence</label>
-                            <input type="text" class="form-control" id="ville" value="Paris" readonly>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="code_postal">Code Postal</label>
-                            <input type="text" class="form-control" id="code_postal" value="75000" readonly>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" value="john.doe@example.com" readonly>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="telephone">Téléphone (+212)</label>
-                            <input type="text" class="form-control" id="telephone" value="0612345678" readonly>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Diplôme</h2>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="pays">Pays</label>
-                            <input type="text" class="form-control" id="pays" value="France" readonly>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="annee_obtention">Année d'Obtention</label>
-                            <input type="number" class="form-control" id="annee_obtention" value="2022" readonly>
-                        </div>
-                    </div>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="diplome_obtenu">Diplôme Obtennu</label>
-                            <input type="text" class="form-control" id="diplome_obtenu" value="Master's Degree" readonly>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="specialite">Spécialité</label>
-                            <input type="text" class="form-control" id="specialite" value="Computer Science" readonly>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="etablissement">Établissement</label>
-                        <input type="text" class="form-control" id="etablissement" value="XYZ University" readonly>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Concours Choisi</h2>
-                <form>
-                    <div class="form-row">
-                        <div class="form-group col-md-6">
-                            <label for="concours">Concours</label>
-                            <input type="text" class="form-control" id="concours" value="Concours XYZ" readonly>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="specialite_choisie">Spécialité Choisie</label>
-                            <input type="text" class="form-control" id="specialite_choisie" value="Spécialité ABC" readonly>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <!-- Your buttons -->
-        <div class="d-flex justify-content-between">
-            <button type="button" class="btn btn-primary">
-                <i class='bx bx-edit-alt'></i> Modifier
-            </button>
-            <button type="button" class="btn btn-success">
-              <i class='bx bx-check'></i> Valider
-            </button>
-            <button type="button" class="btn btn-danger">
-                <i class='bx bx-x'></i> Refuser
-            </button>
-        </div>
-    </div>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-</body>
-</html>
+<script src="/public/node_modules/chart.js/dist/Chart.js"></script>
+
+<canvas id="myChart" width="400" height="400"></canvas>
+
+<script>    
+    var ctx = document.getElementById("myChart");
+    console.log(ctx);
+
+    var options = {}
+
+    var data = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                label: "My First dataset",
+                fill: false,
+                lineTension: 0.1,
+                backgroundColor: "rgba(75,192,192,0.4)",
+                borderColor: "rgba(75,192,192,1)",
+                borderCapStyle: 'butt',
+                borderDash: [],
+                borderDashOffset: 0.0,
+                borderJoinStyle: 'miter',
+                pointBorderColor: "rgba(75,192,192,1)",
+                pointBackgroundColor: "#fff",
+                pointBorderWidth: 1,
+                pointHoverRadius: 5,
+                pointHoverBackgroundColor: "rgba(75,192,192,1)",
+                pointHoverBorderColor: "rgba(220,220,220,1)",
+                pointHoverBorderWidth: 2,
+                pointRadius: 1,
+                pointHitRadius: 10,
+                data: [65, 59, 80, 81, 56, 55, 40],
+                spanGaps: false,
+            }
+        ]
+    };
+
+    var myChart = new Chart({
+        type: 'line',
+        data: data,
+        options: options
+    })
+</script>
