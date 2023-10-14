@@ -1,0 +1,75 @@
+.main{
+    position:absolute;
+    top:70px;
+    width:calc(100%-260px);
+    left: 300px;
+    min-height: calc(100vh - 60px);
+    background: var(--light);
+}
+:root {
+    --poppins: 'Poppins', sans-serif;
+    --lato: 'Lato', sans-serif;
+
+    --light: #F9F9F9;
+    --blue: #3C91E6;
+    --light-blue: #CFE8FF;
+    --grey: #eee;
+    --dark-grey: #AAAAAA;
+    --dark: #342E37;
+    --red: #DB504A;
+    --yellow: #FFCE26;
+    --light-yellow: #FFF2C6;
+    --orange: #FD7238;
+    --light-orange: #FFE0D3;
+}
+.cards {
+    width:1200px;
+    padding:35px 20px ;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px;
+}
+.cards .card{
+    padding:20px;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.number{
+    font-size: 35px;
+    font-weight: 500;
+    color:var(--blue);
+
+}
+.card-name{
+    color:var(--dark-grey);
+    font-weight: 600;
+
+}
+.icon-box i {
+    font-size: 45px;
+    color: var(--blue);
+}
+.tabel{
+    position:absolute;
+    top:250px;
+    width:1170px;
+    min-height: calc(100vh - 60px);
+    background: var(--light);
+  }
+  .btn{
+    margin-right: 3px;
+  } 
+   td span{
+    background-color: rgb(71, 14, 92);
+  }
+  #role{
+    background-color: var(--blue );
+  }
+  i{
+    position: relative;
+    margin-bottom: 7px;
+  }

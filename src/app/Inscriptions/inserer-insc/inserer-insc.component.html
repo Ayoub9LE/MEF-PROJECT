@@ -1,6 +1,5 @@
 <app-sidebar></app-sidebar>
 <app-navbar></app-navbar>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,134 +10,141 @@
 </head>
 <body>
     <div class="container">
-        <div class="row">
-            <div class="col">
-                <h2>Identité</h2>
-                <form>
+        <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+            <!-- Identité -->
+            <div class="row">
+                <div class="col">
+                    <h2>Identité</h2>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="civilite">Civilité</label>
-                            <select id="civilite" class="form-control">
-                                <option>Monsieur</option>
-                                <option>Madame</option>
+                            <select id="civilite" class="form-control" formControlName="civilite">
+                                <option value="Monsieur">Monsieur</option>
+                                <option value="Madame">Madame</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="cin">CIN</label>
-                            <input type="text" class="form-control" id="cin" required>
+                            <input type="text" class="form-control" id="cin" formControlName="cin" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="nom">Nom</label>
-                            <input type="text" class="form-control" id="nom" required>
+                            <input type="text" class="form-control" id="nom" formControlName="nom" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="prenom">Prénom</label>
-                            <input type="text" class="form-control" id="prenom" required>
+                            <input type="text" class="form-control" id="prenom" formControlName="prenom" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="date_naissance">Date de Naissance</label>
-                            <input type="date" class="form-control" id="date_naissance" required>
+                            <input type="date" class="form-control" id="date_naissance" formControlName="date_naissance" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="lieu_naissance">Lieu de Naissance</label>
-                            <input type="text" class="form-control" id="lieu_naissance" required>
+                            <input type="text" class="form-control" id="lieu_naissance" formControlName="lieu_naissance" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="profession">Profession Actuelle</label>
-                        <input type="text" class="form-control" id="profession" required>
+                        <input type="text" class="form-control" id="profession" formControlName="profession" required>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Adresse et Coordonnées</h2>
-                <form>
+
+            <!-- Adresse et Coordonnées -->
+            <div class="row">
+                <div class="col">
+                    <h2>Adresse et Coordonnées</h2>
                     <div class="form-group">
                         <label for="adresse">Adresse de Résidence Actuelle</label>
-                        <input type="text" class="form-control" id="adresse" required>
+                        <input type="text" class="form-control" id="adresse" formControlName="adresse" required>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="ville">Ville de Résidence</label>
-                            <input type="text" class="form-control" id="ville" required>
+                            <input type="text" class="form-control" id="ville" formControlName="ville" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="code_postal">Code Postal</label>
-                            <input type="text" class="form-control" id="code_postal" required>
+                            <input type="text" class="form-control" id="code_postal" formControlName="code_postal" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" required>
+                            <input type="email" class="form-control" id="email" formControlName="email" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="telephone">Téléphone (+212)</label>
-                            <input type="text" class="form-control" id="telephone" required>
+                            <input type="text" class="form-control" id="telephone" formControlName="telephone" required>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Diplôme</h2>
-                <form>
+
+            <!-- Diplôme -->
+            <div class="row">
+                <div class="col">
+                    <h2>Diplôme</h2>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="pays">Pays</label>
-                            <input type="text" class="form-control" id="pays" required>
+                            <input type="text" class="form-control" id="pays" formControlName="pays" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="annee_obtention">Année d'Obtention</label>
-                            <input type="number" class="form-control" id="annee_obtention" required>
+                            <input type="number" class="form-control" id="annee_obtention" formControlName="annee_obtention" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="diplome_obtenu">Diplôme Obtennu</label>
-                            <input type="text" class="form-control" id="diplome_obtenu" required>
+                            <input type="text" class="form-control" id="diplome_obtenu" formControlName="diplome_obtenu" required>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="specialite">Spécialité</label>
-                            <input type="text" class="form-control" id="specialite" required>
+                            <input type="text" class="form-control" id="specialite" formControlName="specialite" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="etablissement">Établissement</label>
-                        <input type="text" class="form-control" id="etablissement" required>
+                        <input type="text" class="form-control" id="etablissement" formControlName="etablissement" required>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col">
-                <h2>Concours Choisi</h2>
-                <form>
+
+            <!-- Concours Choisi -->
+            <div class="row">
+                <div class="col">
+                    <h2>Concours Choisi</h2>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="concours">Concours</label>
-                            <select id="concours" class="form-control">
-                                <!-- Add your options here -->
+                            <select id="concours" class="form-control" formControlName="concours">
+                                <option value="Concours1">Concours 1</option>
+                                <option value="Concours2">Concours 2</option>
+                                <option value="Concours3">Concours 3</option>
+                                <option value="Concours4">Concours 4</option>
                             </select>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="specialite_choisie">Spécialité Choisie</label>
-                            <select id="specialite_choisie" class="form-control">
-                                <!-- Add your options here -->
+                            <select id="specialite_choisie" class="form-control" formControlName="specialite_concours">
+                                <option value="Specialite1">Spécialité 1</option>
+                                <option value="Specialite2">Spécialité 2</option>
+                                <option value="Specialite3">Spécialité 3</option>
+                                <option value="Specialite4">Spécialité 4</option>
                             </select>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Soumettre</button>
+            <button type="submit" class="btn btn-primary" >Soumettre</button>
+        </form>
     </div>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>

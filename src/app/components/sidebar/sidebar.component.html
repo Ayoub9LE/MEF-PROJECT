@@ -1,87 +1,72 @@
 <!-- SIDEBAR -->
+<!-- Add this CSS link if not already present in the head section of your HTML file -->
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <section id="sidebar" [ngClass]="status ? 'hide' : ''">
-    <a href="#" class="brand">
-      <i class='bx bxs-smile'></i>
-      <span class="text">AdminHub</span>
-    </a>
-    <ul class="side-menu top">
-      <li [class.active]="activeItem === 'Dashboard'" (click)="setActiveItem('Dashboard')">
-        <a routerLink="/admin" >
-          <i class='bx bxs-dashboard' ></i>
-          <span class="text">Dashboard</span>
-        </a>
-      </li>
-      <li [class.active]="activeItem === 'Concours'" (click)="toggleActiveItem('Concours')">
-<a href="javascript:void(0)">
-          <i class='bx bxs-book-content' ></i>
-          <span class="text">Concours</span>
-          <i class='bx bxs-chevron-up' *ngIf="activeItem !== 'Concours'"></i>
-          <i class='bx bxs-chevron-right' *ngIf="activeItem === 'Concours'"></i>
-        </a>
-        <ul class="sub-menu" [style.display]="activeItem === 'Concours' ? 'block' : 'none'">
-          <li ><a href="/addconcours" >Ajouter Concours</a></li>
-          <li><a href="/modifyconcours" >Modifier Concours</a></li>
-          <li><a href="/listconcours" >Consulter Concours</a></li>
-        </ul>
-      </li>
-       
-      
-      
-      
-      <li [class.active]="activeItem === 'Inscriptions'" (click)="toggleActiveItem('Inscriptions')">
-        <a href="javascript:void(0)">
-          <i class='bx bxs-edit'></i>
-          <span class="text">Inscriptions</span>
-          <i class='bx bxs-chevron-up' *ngIf="activeItem !== 'Inscriptions'"></i>
-          <i class='bx bxs-chevron-right' *ngIf="activeItem === 'Inscriptions'"></i>
-        </a>
-        <ul class="sub-menu" [style.display]="activeItem === 'Inscriptions' ? 'block' : 'none'">
-          <li><a href="/insererInsc">Ajouter Inscription</a></li>
-          <li><a href="/listinsc">Consulter Inscription</a></li>
-          <li><a href="/accepterrefuser">Valider/Refuser</a></li>
-        </ul>
-      </li>
-      
-      <li [class.active]="activeItem === 'Message'" (click)="setActiveItem('Message')">
-        <a href="#">
-          <i class='bx bxs-message-dots' ></i>
-          <span class="text">Message</span>
-        </a>
-      </li>
-      <li [class.active]="activeItem === 'Reporting'" (click)="setActiveItem('Reporting')">
-        <a href="#">
-          <i class='bx bxs-report'></i>
-                    <span class="text">Reporting</span>
-        </a>
-      </li>
-      <li [class.active]="activeItem === 'Statistiques'" (click)="setActiveItem('Statistiques')">
-        <a href="#">
-          <i class='bx bx-stats' ></i>
-                    <span class="text">Statistiques</span>
-        </a>
-      </li>
-      <li [class.active]="activeItem === 'Habilitations'" (click)="setActiveItem('Habilitations')">
-        <a href="#">
-          <i class='bx bxs-user-circle'></i>
-                      <span class="text">Habilitations</span>
-        </a>
-      </li>
-    </ul>
-    <ul class="side-menu">
-      <li>
-        <a href="#">
-          <i class='bx bxs-cog' ></i>
-          <span class="text">Settings</span>
-        </a>
-      </li>
-      <li>
-        <a href="#" class="logout">
-          <i class='bx bxs-log-out-circle' ></i>
-          <span class="text">Logout</span>
-        </a>
-      </li>
-    </ul>
-  </section>
+  <a href="#" class="brand">
+    <img src="assets/Mef-maroc.png" alt="Your Image" />
+  </a>
+  
+  <ul class="side-menu top">
+    <li [class.active]="activeItem === 'Dashboard'" (click)="setActiveItem('Dashboard')">
+      <a routerLink="/admin">
+        <i class='bx bxs-dashboard' ></i>
+        <span class="text">Dashboard</span>
+      </a>
+    </li>
+    <li [class.active]="activeItem === 'Concours'" (click)="setActiveItem('Concours')">
+      <a href="javascript:void(0)">
+        <i class='bx bxs-book-content' ></i>
+        <span class="text">Concours</span>
+        <i class='bx bxs-chevron-up' *ngIf="activeItem === 'Concours'"></i>
+        <i class='bx bxs-chevron-right' *ngIf="activeItem !== 'Concours'"></i>
+      </a>
+      <ul class="sub-menu" [style.display]="activeItem === 'Concours' ? 'block' : 'none'">
+        <li (click)="setActiveItem('Concours')"><a routerLink="/addconcours">Ajouter Concours</a></li>
+        <li (click)="setActiveItem('Concours')"><a routerLink="/modifyconcours">Modifier Concours</a></li>
+        <li (click)="setActiveItem('Concours')"><a routerLink="/listcon">Consulter Concours</a></li>
+      </ul>
+    </li>
+    <li [class.active]="activeItem === 'Inscriptions'" (click)="setActiveItem('Inscriptions')">
+      <a href="javascript:void(0)">
+        <i class='bx bxs-edit'></i>
+        <span class="text">Inscriptions</span>
+        <i class='bx bxs-chevron-up' *ngIf="activeItem === 'Inscriptions'"></i>
+        <i class='bx bxs-chevron-right' *ngIf="activeItem !== 'Inscriptions'"></i>
+      </a>
+      <ul class="sub-menu" [style.display]="activeItem === 'Inscriptions' ? 'block' : 'none'">
+        <li (click)="setActiveItem('Inscriptions')"><a routerLink="/insererInsc">Ajouter Inscription</a></li>
+        <li (click)="setActiveItem('Inscriptions')"><a routerLink="/listinsc">Consulter Inscription</a></li>
+        <li (click)="setActiveItem('Inscriptions')"><a routerLink="/accepterrefuser">Valider/Refuser</a></li>
+      </ul>
+    </li>
+    <li [class.active]="activeItem === 'Statistiques'" (click)="setActiveItem('Statistiques')">
+      <a routerLink="/admin">
+        <i class='bx bx-stats'></i>
+        <span class="text">Statistiques</span>
+      </a>
+    </li>
+    <li [class.active]="activeItem === 'Habilitations'" (click)="setActiveItem('Habilitations')">
+      <a routerLink="/habilitation">
+        <i class='bx bxs-user-circle'></i>
+        <span class="text">Habilitations</span>
+      </a>
+    </li>
+  </ul>
+  <ul class="side-menu">
+    <li>
+      <a href="#">
+        <i class='bx bxs-cog'></i>
+        <span class="text">Settings</span>
+      </a>
+    </li>
+    <li>
+      <a href="#" class="logout">
+        <i class='bx bxs-log-out-circle'></i>
+        <span class="text">Logout</span>
+      </a>
+    </li>
+  </ul>
+</section>
+
   <!-- SIDEBAR -->

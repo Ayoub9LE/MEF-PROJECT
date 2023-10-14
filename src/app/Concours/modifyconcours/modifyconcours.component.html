@@ -14,66 +14,60 @@
 <body>
 
   <div class="container mt-5">
-    <h1 class="mb-5">Modifier Concours</h1>
-    <form id="updateForm">
+    <header class="mb-5">Modifier Concours</header>
+    <select class="form-control mb-3" [(ngModel)]="selectedConcoursNom" (ngModelChange)="fillForm()">
+      <option *ngFor="let concours of concoursList" [value]="concours.nom">{{ concours.nom }}</option>
+    </select>
+    
+    <form [formGroup]="updateForm" (ngSubmit)="onSubmit()">
       <div class="form-group">
-        <label for="Nom">Nom du concours</label>
-        <input type="text" class="form-control" id="Nom" value="Exemple de concours" required>
+        <label for="nom">Nom du concours</label>
+        <input type="text" class="form-control" id="nom" formControlName="nom" required>
       </div>
       <div class="form-group">
-        <label for="Description">Description</label>
-        <input type="text" class="form-control" id="Description" value="C'est un exemple de concours" required>
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" formControlName="description" required>
       </div>
       <div class="form-group">
-        <label for="Type">Type</label>
-        <input type="text" class="form-control" id="Type" value="Type 1" required>
+        <label for="type">Type</label>
+        <input type="text" class="form-control" id="type" formControlName="type" required>
       </div>
       <div class="form-group">
-        <label for="NombreDeParticipants">Nombre de participants</label>
-        <input type="number" class="form-control" id="NombreDeParticipants" value="100" required>
+        <label for="nombreDeParticipants">Nombre de participants</label>
+        <input type="number" class="form-control" id="nombreDeParticipants" formControlName="nombreDeParticipants" required>
       </div>
       <div class="form-group">
-        <label for="NombreDePlaces">Nombre de places</label>
-        <input type="number" class="form-control" id="NombreDePlaces" value="50" required>
+        <label for="nombreDePlaces">Nombre de places</label>
+        <input type="number" class="form-control" id="nombreDePlaces" formControlName="nombreDePlaces" required>
       </div>
       <div class="form-group">
-        <label for="FraisDInscription">Frais d'inscription</label>
-        <input type="number" class="form-control" id="FraisDInscription" value="10" step="0.01" required>
+        <label for="fraisDInscription">Frais d'inscription</label>
+        <input type="number" class="form-control" id="fraisDInscription" formControlName="fraisDInscription" step="0.01" required>
       </div>
       <div class="form-group">
-        <label for="Règles">Règles</label>
-        <input type="text" class="form-control" id="Règles" value="Respecter tous les participants" required>
+        <label for="règles">Règles</label>
+        <input type="text" class="form-control" id="règles" formControlName="règles" required>
       </div>
       <div class="form-group">
-        <label for="Lieu">Lieu</label>
-        <input type="text" class="form-control" id="Lieu" value="Paris" required>
+        <label for="lieu">Lieu</label>
+        <input type="text" class="form-control" id="lieu" formControlName="lieu" required>
       </div>
       <div class="form-group">
-        <label for="DateDeDebut">Date de début</label>
-        <input type="date" class="form-control" id="DateDeDebut" value="2023-01-01" required>
+        <label for="dateDeDebut">Date de début</label>
+        <input type="date" class="form-control" id="dateDeDebut" formControlName="dateDeDebut" required>
       </div>
       <div class="form-group">
-        <label for="DateDeFin">Date de fin</label>
-        <input type="date" class="form-control" id="DateDeFin" value="2023-12-31" required>
+        <label for="dateDeFin">Date de fin</label>
+        <input type="date" class="form-control" id="dateDeFin" formControlName="dateDeFin" required>
       </div>
       <div class="form-group">
-        <label for="Etat">État</label>
-        <input type="text" class="form-control" id="Etat" value="Actif" required>
+        <label for="etat">État</label>
+        <input type="text" class="form-control" id="etat" formControlName="etat" required>
       </div>
       <button type="submit" class="btn btn-primary">Modifier</button>
     </form>
   </div>
 
-  <!-- Add Bootstrap JavaScript at the end of the body tag -->
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-
-  <!-- Add script to handle form submission -->
-  <script>
-    document.getElementById('updateForm').addEventListener('submit', function(event) {
-      event.preventDefault();
-      // Your AJAX request to update the data on the server goes here.
-      alert('Data has been updated!');
-    });
-  </script>
+  
 </body>
 </html>

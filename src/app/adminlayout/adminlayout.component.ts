@@ -23,10 +23,14 @@ export class AdminlayoutComponent implements OnInit{
     this.barChart = new Chart(htmlRef, {
       type: 'bar',
       data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        labels: [  'Cadres Financiers',
+         ' Économistes',
+          'Gestionnaires de Projets Économiques',
+          'Contrôleurs Financiers',
+          'Analystes Financiers'],
         datasets: [{
-          label: '# of Votes',
-          data: [12, 19, 3, 5, 2, 3],
+          label: '',
+          data: [12, 19, 3, 5, 2],
           backgroundColor: [
             'rgba(255, 99, 132, 0.2)',
             'rgba(54, 162, 235, 0.2)',
@@ -61,7 +65,7 @@ export class AdminlayoutComponent implements OnInit{
     this.polarChart = new Chart(htmlRef, {
       type: 'polarArea',
       data: {
-        labels: ['Red', 'Green', 'Yellow', 'Grey', 'Blue'],
+        labels: ['Inscriptions refusées', 'Inscriptions acceptées', 'Yellow', 'Inscriptions en attente', 'Blue'],
         datasets: [{
           label: 'My First Dataset',
           data: [11, 16, 7, 3, 14],

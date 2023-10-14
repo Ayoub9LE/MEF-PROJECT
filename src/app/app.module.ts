@@ -6,6 +6,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule,FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -21,6 +23,8 @@ import { ModifyconcoursComponent } from './Concours/modifyconcours/modifyconcour
 import { InsererInscComponent } from './Inscriptions/inserer-insc/inserer-insc.component';
 import { InscriptionslistComponent } from './Inscriptions/inscriptionslist/inscriptionslist.component';
 import { AcceptrefuseinscComponent } from './Inscriptions/acceptrefuseinsc/acceptrefuseinsc.component';
+import { HabilitationComponent } from './habilitation/habilitation.component';
+import { AdduserComponent } from './habilitation/adduser/adduser.component';
 const routes: Routes= [
   {path : "login", component : UserloginComponent},
   {path : "register", component : RegisterComponent},
@@ -29,10 +33,15 @@ const routes: Routes= [
   {path : "navbar", component : NavbarComponent},
   {path : "test", component : TestComponent},
   {path : "addconcours", component : AddConcoursComponent},
+  {path : "listcon", component : ListconcoursComponent},
    {path : "modifyconcours", component : ModifyconcoursComponent},
   {path : "insererInsc", component : InsererInscComponent},
   {path : "listinsc", component : InscriptionslistComponent},
-  {path : "accepterrefuser", component : AcceptrefuseinscComponent}
+  {path : "accepterrefuser/:id", component : AcceptrefuseinscComponent},
+  {path : "habilitation", component : HabilitationComponent},
+  {path : "adduser", component : AdduserComponent}
+
+
 
 ]; 
 
@@ -49,13 +58,18 @@ const routes: Routes= [
     ModifyconcoursComponent,
     InsererInscComponent ,
     InscriptionslistComponent,
-    AcceptrefuseinscComponent ],
+    AcceptrefuseinscComponent,
+    HabilitationComponent,
+    AdduserComponent ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     TooltipModule.forRoot(),
     NgbModule, 
+    FormsModule,
     BsDropdownModule.forRoot(), // add this line,
     CommonModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes)
   ],

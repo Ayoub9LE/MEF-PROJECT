@@ -12,8 +12,8 @@
   
 </head>
 <body>
-  <section class="bg-light p-5">
-    <h3 class="pb-2">Liste des Concours</h3>
+  <section class="container bg-light p-5">
+    <header class="pb-2">Liste des Inscriptions</header>
     <div class="table-responsive">
       <table class="table table-hover table-center-text">
         <thead class="bg-white-text" style="background-color: #3C91E6;">
@@ -28,118 +28,21 @@
           </tr>
         </thead>
         <tbody>
-          <!-- I will just show four rows as per your request -->
-          <tr>
-            <td>Nom1</td>
-            <td>Prenom1</td>
-            <td>Profession1</td>
-            <td>Email1@example.com</td>
-            <td>Diplome1</td>
-            <td>Specialite1</td>
-            <td class="refused">En cours</td>
-          </tr>
-          <tr>
-            <td>Nom2</td>
-            <td>Prenom2</td>
-            <td>Profession2</td>
-            <td>Email2@example.com</td>
-            <td>Diplome2</td>
-            <td>Specialite2</td>
-            <td class="processing">En cours </td>
-          </tr>
-          <tr>
-            <td>Nom3</td>
-            <td>Prenom3</td>
-            <td>Profession3</td>
-            <td>Email3@example.com</td>
-            <td>Diplome3</td>
-            <td>Specialite3</td>
-            <td class="processing">En cours </td>
-          </tr>
-          <tr>
-            <td>Nom1</td>
-            <td>Prenom1</td>
-            <td>Profession1</td>
-            <td>Email1@example.com</td>
-            <td>Diplome1</td>
-            <td>Specialite1</td>
-            <td class="done">En cours</td>
-          </tr>
-          <tr>
-            <td>Nom2</td>
-            <td>Prenom2</td>
-            <td>Profession2</td>
-            <td>Email2@example.com</td>
-            <td>Diplome2</td>
-            <td>Specialite2</td>
-            <td class="refused">Refusé</td>
-          </tr>
-          <tr>
-            <td>Nom3</td>
-            <td>Prenom3</td>
-            <td>Profession3</td>
-            <td>Email3@example.com</td>
-            <td>Diplome3</td>
-            <td>Specialite3</td>
-            <td class="processing">En cours</td>
-          </tr>
-          <tr>
-            <td>Nom1</td>
-            <td>Prenom1</td>
-            <td>Profession1</td>
-            <td>Email1@example.com</td>
-            <td>Diplome1</td>
-            <td>Specialite1</td>
-            <td class="done">Accepté </td>
-          </tr>
-          <tr>
-            <td>Nom2</td>
-            <td>Prenom2</td>
-            <td>Profession2</td>
-            <td>Email2@example.com</td>
-            <td>Diplome2</td>
-            <td>Specialite2</td>
-            <td class="done">Accepté</td>
-          </tr>
-          <tr>
-            <td>Nom3</td>
-            <td>Prenom3</td>
-            <td>Profession3</td>
-            <td>Email3@example.com</td>
-            <td>Diplome3</td>
-            <td>Specialite3</td>
-            <td class="refused">Refusé</td>
-          </tr>
-          <tr>
-            <td>Nom1</td>
-            <td>Prenom1</td>
-            <td>Profession1</td>
-            <td>Email1@example.com</td>
-            <td>Diplome1</td>
-            <td>Specialite1</td>
-            <td class="processing">En cours</td>
-          </tr>
-          <tr>
-            <td>Nom2</td>
-            <td>Prenom2</td>
-            <td>Profession2</td>
-            <td>Email2@example.com</td>
-            <td>Diplome2</td>
-            <td>Specialite2</td>
-            <td class="refused">Refusé</td>
-          </tr>
-          <tr>
-            <td>Nom3</td>
-            <td>Prenom3</td>
-            <td>Profession3</td>
-            <td>Email3@example.com</td>
-            <td>Diplome3</td>
-            <td>Specialite3</td>
-            <td class="done">Accepté</td>
+          <tr *ngFor="let inscription of inscriptions" (click)="viewInscription(inscription)">
+            <td>{{inscription.nom}}</td>
+            <td>{{inscription.prenom}}</td>
+            <td>{{inscription.profession}}</td>
+            <td>{{inscription.email}}</td>
+            <td>{{inscription.diplome_obtenu}}</td>
+            <td>{{inscription.specialite}}</td>
+            <td [ngClass]="getClassForInscriptionStatus(inscription.statut)">
+              {{inscription.statut}}
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </section>
 </body>
+
 </html>

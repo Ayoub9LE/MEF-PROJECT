@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <div class="container">
+    <div class="container" *ngIf="inscription">
         <div class="row">
             <div class="col">
                 <h2>Identité</h2>
@@ -19,36 +19,36 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="civilite">Civilité</label>
-                            <input id="civilite" class="form-control" value="Monsieur" readonly>
+                            <input id="civilite" class="form-control" [value]="inscription.civilite" readonly>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="cin">CIN</label>
-                            <input type="text" class="form-control" id="cin" value="ABC123" readonly>
+                            <input type="text" class="form-control" id="cin" [value]="inscription.cin" readonly>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="nom">Nom</label>
-                            <input type="text" class="form-control" id="nom" value="Doe" readonly>
+                            <input type="text" class="form-control" id="nom" [value]="inscription.nom" readonly>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="prenom">Prénom</label>
-                            <input type="text" class="form-control" id="prenom" value="John" readonly>
+                            <input type="text" class="form-control" id="prenom" [value]="inscription.prenom" readonly>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="date_naissance">Date de Naissance</label>
-                            <input type="date" class="form-control" id="date_naissance" value="2000-01-01" readonly>
+                            <input type="date" class="form-control" id="date_naissance" [value]="inscription.date_naissance" readonly>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="lieu_naissance">Lieu de Naissance</label>
-                            <input type="text" class="form-control" id="lieu_naissance" value="Paris" readonly>
+                            <input type="text" class="form-control" id="lieu_naissance" [value]="inscription.lieu_naissance" readonly>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="profession">Profession Actuelle</label>
-                        <input type="text" class="form-control" id="profession" value="Engineer" readonly>
+                        <input type="text" class="form-control" id="profession" [value]="inscription.profession" readonly>
                     </div>
                 </form>
             </div>
@@ -59,26 +59,26 @@
                 <form>
                     <div class="form-group">
                         <label for="adresse">Adresse de Résidence Actuelle</label>
-                        <input type="text" class="form-control" id="adresse" value="123 Main St" readonly>
+                        <input type="text" class="form-control" id="adresse" [value]="inscription.adresse" readonly>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="ville">Ville de Résidence</label>
-                            <input type="text" class="form-control" id="ville" value="Paris" readonly>
+                            <input type="text" class="form-control" id="ville" [value]="inscription.ville" readonly>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="code_postal">Code Postal</label>
-                            <input type="text" class="form-control" id="code_postal" value="75000" readonly>
+                            <input type="text" class="form-control" id="code_postal" [value]="inscription.code_postal" readonly>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="email">Email</label>
-                            <input type="email" class="form-control" id="email" value="john.doe@example.com" readonly>
+                            <input type="email" class="form-control" id="email" [value]="inscription.email" readonly>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="telephone">Téléphone (+212)</label>
-                            <input type="text" class="form-control" id="telephone" value="0612345678" readonly>
+                            <input type="text" class="form-control" id="telephone" [value]="inscription.telephone" readonly>
                         </div>
                     </div>
                 </form>
@@ -91,26 +91,26 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="pays">Pays</label>
-                            <input type="text" class="form-control" id="pays" value="France" readonly>
+                            <input type="text" class="form-control" id="pays" [value]="inscription.pays" readonly>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="annee_obtention">Année d'Obtention</label>
-                            <input type="number" class="form-control" id="annee_obtention" value="2022" readonly>
+                            <input type="number" class="form-control" id="annee_obtention" [value]="inscription.annee_obtention" readonly>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="diplome_obtenu">Diplôme Obtennu</label>
-                            <input type="text" class="form-control" id="diplome_obtenu" value="Master's Degree" readonly>
+                            <input type="text" class="form-control" id="diplome_obtenu" [value]="inscription.diplome_obtenu" readonly>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="specialite">Spécialité</label>
-                            <input type="text" class="form-control" id="specialite" value="Computer Science" readonly>
+                            <input type="text" class="form-control" id="specialite" [(ngModel)]="inscription.specialite">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="etablissement">Établissement</label>
-                        <input type="text" class="form-control" id="etablissement" value="XYZ University" readonly>
+                        <input type="text" class="form-control" id="etablissement" [value]="inscription.etablissement" readonly>
                     </div>
                 </form>
             </div>
@@ -122,11 +122,11 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="concours">Concours</label>
-                            <input type="text" class="form-control" id="concours" value="Concours XYZ" readonly>
+                            <input type="text" class="form-control" id="concours" [value]="inscription.concours" readonly>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="specialite_choisie">Spécialité Choisie</label>
-                            <input type="text" class="form-control" id="specialite_choisie" value="Spécialité ABC" readonly>
+                            <input type="text" class="form-control" id="specialite_choisie" [value]="inscription.specialite_concours" readonly>
                         </div>
                     </div>
                 </form>
@@ -134,17 +134,19 @@
         </div>
         <!-- Your buttons -->
         <div class="d-flex justify-content-between">
-            <button type="button" class="btn btn-primary">
+            <button type="button" class="btn btn-primary" (click)="onEdit()">
                 <i class='bx bx-edit-alt'></i> Modifier
             </button>
-            <button type="button" class="btn btn-success">
+            <button type="button" class="btn btn-success" (click)="onValidate()">
               <i class='bx bx-check'></i> Valider
             </button>
-            <button type="button" class="btn btn-danger">
+            <button type="button" class="btn btn-danger" (click)="onReject()">
                 <i class='bx bx-x'></i> Refuser
             </button>
         </div>
     </div>
+    
+    
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 </html>

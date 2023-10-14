@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
+import { Component,OnInit  } from '@angular/core';
 import { trigger, transition, style, animate } from '@angular/animations';
 import{ Router } from '@angular/router';
+import { RegisterService } from './register.service';
+import { User } from './User.model'; // Import your User model here
 
 
 
@@ -21,10 +23,24 @@ import{ Router } from '@angular/router';
   ]
 })
 
-export class RegisterComponent {
-  constructor(private router: Router){}
-  connecttoLogin(){
-    this.router.navigate(['/login'])
+export class RegisterComponent implements OnInit {
+
+  user: User = new User(); // Initialize user object
+
+  constructor(private router: Router, private userService: RegisterService) { } // Don't forget to import UserService
+
+  ngOnInit(): void {
   }
 
+  register(): void {
+    this.userService.registerUser(this.user).subscribe(
+      data => {
+        console.log(data);
+        this.router.navigate(['/login']);
+      },
+      error => {
+        console.log(error);
+      }
+    );
+  }
 }

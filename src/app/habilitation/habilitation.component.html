@@ -1,0 +1,88 @@
+<app-navbar></app-navbar>
+<app-sidebar></app-sidebar>
+<div class="main">
+    <div class="cards">
+        <div class="card">
+            <div class="card-content">
+                <div class="number">1217</div>
+                <div class="card-name">User</div>
+            </div>
+            <div class="icon-box">
+                <i class='bx bxs-user-check' ></i>           
+             </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="number">20</div>
+                <div class="card-name">Gestionnaires</div>
+            </div>
+            <div class="icon-box">
+                <i class='bx bx-check-circle' ></i>  
+             </div>
+
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="number">3</div>
+                <div class="card-name">Administrateur</div>
+            </div>
+            <div class="icon-box">
+                <i class='bx bx-check-circle' ></i>           
+             </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <div class="number">256</div>
+                <div class="card-name">Concours</div>
+            </div>
+            <div class="icon-box">
+                <i class='bx bx-loader' ></i>  
+            </div>
+        </div>
+
+        <div class="tabel">
+            <div class="card-header">
+              <h3>
+                <i class="fas fa-users mr-2"></i>User list 
+                <span class="float-right"> 
+                    <button type="button" class="btn btn-outline-dark" routerLink="/adduser"><i class='bx bx-plus-circle'></i> Ajouter User
+                                   </button>
+                </span>
+              </h3>
+            </div>
+            <div class="card-body pr-2 pl-2">
+              <table id="example" class="table table-striped table-bordered" style="width:100%">
+                <thead>
+                  <tr b >
+                    <th class="text-center">SL</th>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Username</th>
+                    <th class="text-center">Email address</th>
+                    <th class="text-center">Status</th>
+                    <th class="text-center">Created</th>
+                    <th width='30%' class="text-center">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="text-center" *ngFor="let user of users">
+                    <td>{{ user.id }}</td>
+                    <td>{{ user.firstname }} {{ user.secondname }}</td>
+                    <td>{{ user.login }} <br><span id="role" class='badge badge-lg badge-dark text-white'>{{ user.roles && user.roles[0] }}</span></td>
+                    <td>N/A</td> <!-- email attribute does not exist in User model -->
+                    <td><span class="badge badge-lg badge-info text-white">{{ user.statut }}</span></td>
+                    <td><span class="badge badge-lg badge-secondary text-white">N/A</span></td> <!-- createdDate attribute does not exist in User model -->
+                    <td>
+                        <a class="btn btn-success btn-sm" href="#">View</a>
+                        <a class="btn btn-info btn-sm" href="#">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="#">Remove</a>
+                        <a class="btn btn-warning btn-sm" href="#">Disable</a>
+                        <a class="btn btn-secondary btn-sm" href="#">Active</a>
+                    </td>
+                </tr>
+                
+                </tbody>
+                
+              </table>
+            </div>
+          </div>
+    

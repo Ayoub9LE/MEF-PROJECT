@@ -1,4 +1,7 @@
-<!DOCTYPE html>
+
+<app-sidebar></app-sidebar>
+<app-navbar></app-navbar>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -8,55 +11,63 @@
 <body>
   <div class="container">
     <header>Ajouter Concours</header>
-    <form>
+    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
       <div class="form first">
         <div class="details personal">
           <span class="title">Informations du Concours</span>
           <div class="fields">
             <div class="input-field">
               <label>Nom du concours</label>
-              <input type="text" name="Nom" required>
+              <input type="text" formControlName="nom" required>
             </div>
             <div class="input-field">
               <label>Description</label>
-              <input type="text" name="Description" required>
+              <input type="text" formControlName="description" required>
             </div>
             <div class="input-field">
-              <label>Type</label>
-              <input type="text" name="Type" required>
+              <label>Exigences Techniques</label>
+              <input type="text" formControlName="type" required>
             </div>
             <div class="input-field">
               <label>Nombre de participants</label>
-              <input type="number" name="NombreDeParticipants" required>
+              <input type="number" formControlName="nombreDeParticipants" required>
             </div>
             <div class="input-field">
               <label>Nombre de places</label>
-              <input type="number" name="NombreDePlaces" required>
+              <input type="number" formControlName="nombreDePlaces" required>
             </div>
             <div class="input-field">
               <label>Frais d'inscription</label>
-              <input type="number" name="FraisDInscription" step="0.01" required>
+              <input type="number" formControlName="fraisDInscription" step="0.01" required>
             </div>
             <div class="input-field">
-              <label>Règles</label>
-              <input type="text" name="Règles" required>
+              <label>Niveau Requis</label>
+              <input type="text" formControlName="règles" required>
             </div>
             <div class="input-field">
               <label>Lieu</label>
-              <input type="text" name="Lieu" required>
+              <input type="text" formControlName="lieu" required>
             </div>
             <div class="input-field">
-              <label>Date de début</label>
-              <input type="date" name="DateDeDebut" required>
+              <label>Date limite de postulation</label>
+              <input type="date" formControlName="dateDeDebut" required>
             </div>
             <div class="input-field">
-              <label>Date de fin</label>
-              <input type="date" name="DateDeFin" required>
+              <label>Date d'affichage
+
+              </label>
+              <input type="date" formControlName="dateDeFin" required>
             </div>
             <div class="input-field">
               <label>État</label>
-              <input type="text" name="Etat" required>
-            </div>
+              <i class='bx bx-list-ul'></i>
+              <select formControlName="etat" required>
+                   <option value="Terminé">Terminé</option>
+                   <option value="En cours">En cours</option>
+                    <option value="Pas encore">Pas encore</option>
+                    </select>
+             </div>
+
           </div>
         </div>
         <button class="ajouter-btn" type="submit">
@@ -66,5 +77,7 @@
       </div>
     </form>
   </div>
+  
+  
 </body>
 </html>
